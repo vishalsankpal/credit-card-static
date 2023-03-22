@@ -1,0 +1,263 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin and padding
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #e2e2e2;
+}
+
+body {
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.text-center, section.interested-section .card-2.reverse .card-wrapper .card-title-container .card-title, section.get-credit-card-section .card-4 .card-wrapper .card-title-container .card-title, section.page-title-section .page-title, section .sub-heading {
+  text-align: center;
+}
+
+.container, section.interested-section .text-container {
+  max-width: 921px;
+  margin: 0 auto;
+  padding: 10px 10px 7px;
+  border: 1px solid rgb(215, 215, 215);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+@media only screen and (max-width: 767px) {
+  .row {
+    row-gap: 10px;
+    justify-content: center;
+  }
+}
+
+section {
+  padding: 0 20px;
+}
+section .sub-heading,
+section .intterested-section-title {
+  font-size: 1.063rem;
+  font-weight: 400;
+  color: #8B8989;
+  padding-bottom: 10px;
+}
+section .ads-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #403F3F;
+  text-align: right;
+}
+
+header {
+  border-bottom: 2px solid rgb(230, 70, 22);
+}
+header .logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 9px 0;
+}
+header .logo-container a {
+  display: inline-flex;
+}
+
+section.page-title-section .page-title {
+  padding-top: 21px;
+  padding-bottom: 24px;
+  font-size: 1.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+
+section.get-credit-card-section .get-credit-title {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #403F3F;
+  margin-bottom: 4px;
+}
+section.get-credit-card-section .card-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  padding: 0 5px;
+  flex: 0 0 auto;
+  width: 33.33%;
+}
+@media only screen and (max-width: 767px) {
+  section.get-credit-card-section .card-4 {
+    width: 100%;
+  }
+}
+section.get-credit-card-section .card-4 .card-wrapper {
+  border-radius: 4px;
+  border: 1px solid rgb(215, 215, 215);
+  overflow: hidden;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-image-container {
+  display: flex;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-title-container {
+  padding: 20px 30px;
+  background-color: #F8744C;
+  transition: 0.3s ease-in-out background-color;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-title-container .card-title {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out transform;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-title-container .card-title .cart-title-text {
+  font-size: 1.313rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+section.get-credit-card-section .card-4 .card-wrapper .card-title-container .card-title .card-icon i {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+section.get-credit-card-section .card-4 .card-wrapper:hover .card-title-container {
+  background-color: #FFD55C;
+  transition: 0.3s ease-in-out background-color;
+}
+section.get-credit-card-section .card-4 .card-wrapper:hover .card-title-container .card-title {
+  color: #000;
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out transform;
+}
+section.get-credit-card-section .card-4 .card-wrapper:hover .card-title-container .card-title .cart-title-text {
+  margin-bottom: 0.5rem;
+}
+section.get-credit-card-section .cta-row {
+  margin-top: 10px;
+}
+section.get-credit-card-section .cta-row .cta-wrapper {
+  padding: 0 5px;
+  flex: 0 0 auto;
+  width: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  section.get-credit-card-section .cta-row .cta-wrapper {
+    width: 100%;
+  }
+}
+section.get-credit-card-section .cta-row .cta-wrapper button {
+  width: 100%;
+  background-color: #F8744C;
+  transition: 0.3s ease-in-out all;
+  min-height: 70px;
+  padding: 0 20px 0 37px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 2px;
+}
+@media only screen and (max-width: 460px) {
+  section.get-credit-card-section .cta-row .cta-wrapper button {
+    padding: 0 20px 0 20px;
+  }
+}
+section.get-credit-card-section .cta-row .cta-wrapper button .right-icon i {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+section.get-credit-card-section .cta-row .cta-wrapper button:hover {
+  background-color: #FFD55C;
+  color: #000;
+  transition: 0.3s ease-in-out all;
+}
+
+section.interested-section {
+  margin-top: 23px;
+  padding-bottom: 80px;
+}
+section.interested-section .text-container {
+  border: none;
+  padding: 0;
+}
+section.interested-section .card-2 {
+  padding: 0 5px;
+  flex: 0 0 auto;
+  width: 20%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  section.interested-section .card-2 {
+    width: 50%;
+  }
+}
+section.interested-section .card-2.reverse .card-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid rgb(215, 215, 215);
+}
+section.interested-section .card-2.reverse .card-wrapper .card-image-container {
+  display: flex;
+}
+section.interested-section .card-2.reverse .card-wrapper .card-image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+section.interested-section .card-2.reverse .card-wrapper .card-title-container {
+  padding: 30px 20px 18px;
+  text-align: center;
+  background-color: #3D3C3C;
+  transition: 0.3s ease-in-out all;
+}
+section.interested-section .card-2.reverse .card-wrapper .card-title-container .card-title {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out all;
+}
+section.interested-section .card-2.reverse .card-wrapper .card-title-container .card-title .cart-title-text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
+}
+section.interested-section .card-2.reverse .card-wrapper .card-title-container .card-title .card-icon i {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+section.interested-section .card-2.reverse .card-wrapper:hover .card-title-container {
+  background-color: #fff;
+  transition: 0.3s ease-in-out all;
+}
+section.interested-section .card-2.reverse .card-wrapper:hover .card-title-container .card-title {
+  color: #3D3C3C;
+  transition: 0.3s ease-in-out all;
+}/*# sourceMappingURL=style.css.map */

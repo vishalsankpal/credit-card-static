@@ -1,0 +1,286 @@
+// Variables
+$light-color: #fff;
+$primary-color: rgba(230, 70, 22, 1);
+$page-title: #333333;
+$section-title: #8B8989;
+$dark-color: #000;
+$container-border:1px solid rgba(215, 215, 215, 1);
+$ad-text-color: #403F3F;
+$card-text-bg:#F8744C;
+$card-hover-bg:#FFD55C;
+$card-two-text-bg:#3D3C3C;
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin and padding
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+
+html{
+    background-color: #e2e2e2;
+}
+body {
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: $light-color;
+    font-size: 16px;
+}
+//Comman css
+.text-center{
+    text-align: center;
+}
+.container{
+    max-width: 921px;
+    margin: 0 auto;
+    padding: 10px 10px 7px;
+    border: $container-border;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    @media only screen and (max-width:767px){
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+section{
+    padding: 0 20px;
+    .sub-heading,
+    .intterested-section-title{
+        font-size: 1.063rem;
+        font-weight: 400;
+        color: $section-title;
+        padding-bottom: 10px;
+    }
+    .sub-heading{
+        @extend .text-center;
+    }
+    .ads-text{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $ad-text-color;
+        text-align: right;
+    }
+}
+// Header
+header{
+    border-bottom:2px solid $primary-color;
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        padding: 9px 0;
+        a{
+            display: inline-flex;
+        }
+    }
+}
+
+// page-title section
+section.page-title-section{
+    .page-title{
+        padding-top: 21px;
+        padding-bottom: 24px;
+        font-size: 1.875rem;
+        font-weight: 400;
+        font-style: normal;
+        color: $page-title;
+        @extend .text-center;
+    }
+}
+section.get-credit-card-section{
+    .get-credit-title{
+        font-size: 0.75rem;
+        font-weight: 400;
+        font-style: normal;
+        color: $ad-text-color;
+        margin-bottom: 4px;
+    }
+    .card-4{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        padding: 0 5px;
+        flex: 0 0 auto;
+        width: 33.33%;
+        @media only screen and (max-width: 767px){
+            width: 100%;
+        }
+        .card-wrapper{
+            border-radius: 4px;
+            border: $container-border;
+            overflow: hidden;
+            .card-image-container{
+                display: flex;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                }
+            }
+            .card-title-container{
+                padding: 20px 30px;
+                background-color: $card-text-bg;
+                transition: 0.3s ease-in-out background-color;
+                .card-title{
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    @extend .text-center;
+                    color: $light-color;
+                    transition: 0.3s ease-in-out transform;
+                    .cart-title-text{
+                        font-size: 1.313rem;
+                        font-weight: 400;
+                        margin-bottom: 0.5rem;
+                    }
+                    .card-icon{
+                        i{
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .card-title-container{
+                    background-color: $card-hover-bg;
+                    transition: 0.3s ease-in-out background-color;
+                    .card-title{
+                        color: $dark-color;
+                        transform: translateY(-5px);
+                        transition: 0.3s ease-in-out transform;
+                        .cart-title-text{
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cta-row{
+        margin-top: 10px;
+        .cta-wrapper{
+            padding: 0 5px;
+            flex: 0 0 auto;
+            width: 50%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            @media only screen and (max-width: 767px){
+                width: 100%;
+            }
+            button{
+                width: 100%;
+                background-color: $card-text-bg;
+                transition: 0.3s ease-in-out all;
+                min-height: 70px;
+                padding: 0 20px 0 37px;
+                display: flex;
+                align-items: center;
+                color: $light-color;
+                font-size: 21px;
+                font-weight: 400;
+                border: none;
+                cursor: pointer;
+                justify-content: space-between;
+                border-radius: 2px;
+                @media only screen and (max-width: 460px){
+                    padding: 0 20px 0 20px;
+                }
+                .right-icon{
+                    i{
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                    }
+                }
+                &:hover{
+                    background-color: $card-hover-bg;
+                    color: $dark-color;
+                    transition: 0.3s ease-in-out all;
+                }
+            }
+        }
+    }
+}
+
+section.interested-section{
+    margin-top: 23px;
+    padding-bottom: 80px;
+    .text-container{
+        @extend .container;
+        border: none;
+        padding: 0;
+
+    }
+    .card-2{
+        padding: 0 5px;
+        flex: 0 0 auto;
+        width: 20%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        @media only screen and (max-width: 767px){
+            width:50%;
+        }
+        &.reverse{
+            .card-wrapper{
+                display: flex;
+                flex-direction: column-reverse;
+                border: $container-border;
+                .card-image-container{
+                    display: flex;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                    }
+                }
+                .card-title-container{
+                    padding: 30px 20px 18px;
+                    text-align: center;
+                    background-color: $card-two-text-bg;
+                    transition: 0.3s ease-in-out all;
+                    .card-title{
+                        display: flex;
+                        flex-direction: column;
+                        text-decoration: none;
+                        @extend .text-center;
+                        color: $light-color;
+                        transition: 0.3s ease-in-out all;
+                        .cart-title-text{
+                            font-size: 1.125rem;
+                            font-weight: 400;
+                            margin-bottom: 1.875rem;
+                        }
+                        .card-icon{
+                            i{
+                                font-size: 1.3rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .card-title-container{
+                        background-color: $light-color;
+                        transition: 0.3s ease-in-out all;
+                        .card-title{
+                            color: $card-two-text-bg;
+                            transition: 0.3s ease-in-out all;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
